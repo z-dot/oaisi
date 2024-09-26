@@ -1,0 +1,47 @@
+---
+interface Props {
+	title: string;
+	href: string;
+    number: string;
+    times: string;
+}
+
+const { href, title, number, times } = Astro.props;
+---
+
+<div class="item">
+    <p>{number} <a href={href}>{title}</a></p>
+    <div class="item-content">
+        <div class="slot-container">
+            <slot />
+        </div>
+        <div class="times-container">
+            {times}
+        </div>
+    </div>
+
+<style>
+    .item-content {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .slot-container {
+        flex: 4;
+        padding-right: 1rem;
+    }
+    .times-container {
+        flex: 1;
+        text-align: right;
+    }
+    @media (max-width: 1250px) {
+        .item-content {
+            flex-direction: column;
+        }
+        .slot-container {
+            padding-right: 0;
+            margin-bottom: 0.5rem;
+        }
+    }
+</style>
+</div>
+<hr>

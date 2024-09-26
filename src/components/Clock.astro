@@ -1,0 +1,24 @@
+---
+// Clock.astro
+---
+
+<div id="clock"></div>
+
+<script>
+  function updateClock() {
+    const now = new Date();
+    const options = { 
+      hour12: false, 
+      hour: '2-digit', 
+      minute: '2-digit', 
+      second: '2-digit',
+      timeZone: 'Europe/London'
+    };
+    const timeString = now.toLocaleTimeString('en-US', options);
+    document.getElementById('clock').textContent = timeString;
+  }
+
+  // Update the clock immediately and then every second
+  updateClock();
+  setInterval(updateClock, 1000);
+</script>

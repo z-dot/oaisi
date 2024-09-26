@@ -1,0 +1,59 @@
+---
+
+import Clock from '../components/Clock.astro'
+
+---
+<div id="sidebar">
+    <div style="display: flex; gap: 1em;">
+        <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+            <img id="logo" src='src/logos/biglogo.svg' height="100px">
+            <div style="margin-left: auto;">
+                <Clock />
+            </div>
+        </div>
+    </div>
+    <div id="menu-content">
+        <p>OAISI is the Oxford AI Safety Initiative. We are a community of students and researchers committed to reducing societal risks from advanced artificial intelligence.</p>
+        <p>AI safety is a sociotechnical issue: we support both governance and technical work, and we run programmes to build skills in both.</p>
+        <p>Currently, we are open to applications for OxARENA, our intensive residential for rapidly building skills in technical safety. Apply here.</p>
+        <p>If you are a researcher working on AI safety visiting Oxford, please reach out to us here.</p>
+        <!-- <hr> -->
+        <a href="/">Committee</a><br>
+        <a href="/">Contact us</a><br>
+        <a href="/">Instagram</a>
+    </div>
+
+    <script>
+    </script>
+</div>
+</div>
+<script>
+    function updateLogo() {
+        const logo = document.getElementById('logo');
+        if (window.innerWidth < 1250) {
+            logo?.setAttribute('src', 'src/logos/smalllogo.svg')
+            logo?.setAttribute('height', '50px');
+        } else {
+            logo?.setAttribute('src', 'src/logos/biglogo.svg')
+            logo?.setAttribute('height', '100px');
+        }
+    }
+    function toggleMenuContent() {
+        const menuContent = document.getElementById('menu-content');
+        const isIndexPage = window.location.pathname === '/' || window.location.pathname === '/index.html';
+        
+        if (window.innerWidth < 1250 && !isIndexPage && menuContent) {
+            menuContent.style.display = 'none';
+        } else if (menuContent) {
+            menuContent.style.display = 'block';
+        }
+    }
+
+    // Initial call
+    toggleMenuContent();
+
+    // Add event listener for window resize
+    window.addEventListener('resize', toggleMenuContent);
+    updateLogo();
+    window.addEventListener('resize', updateLogo);
+</script>
