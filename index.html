@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+    :root {
+        --sidesize: 20rem;
+        --mainsize: 60rem;
+    }
+
+    body {
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 20px;
+        padding: 0;
+        margin: 0;
+    }
+
+    @media (min-width: 80rem) { 
+        /*  */
+        #sidebar {
+            width: var(--sidesize);
+            max-width: none;
+            margin: 0;
+            height:60px;
+            background-color: blue;
+            padding: 5px;
+        }
+        
+        #main {
+            width: var(--mainsize);
+            margin: 0;
+            height: 60px;
+            position: absolute;
+            background-color: lime;
+            left: max(var(--sidesize), calc(50% - var(--mainsize) / 2));
+            top: 0;
+            padding: 5px;
+        }
+    }
+
+    @media (max-width: 80rem) {
+        #sidebar {
+            display: block;
+            max-width: 95%;
+            margin: 0 auto;
+            height:60px;
+            background-color: blue;
+        }
+        
+        #main {
+            display: block;
+            max-width: 95%;
+            margin: 0 auto;
+            height:60px;
+            background-color: lime;
+        } 
+    }
+    </style>
+</head>
+<body>
+    <div id="sidebar">hello</div>
+    <div id="main">world</div>
+</body>
+</html>
