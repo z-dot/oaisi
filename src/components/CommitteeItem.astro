@@ -11,7 +11,7 @@ const { href, name, imageUrl, role } = Astro.props;
 
 <div class="committee-member">
     <div class="profile-image">
-        <img src={imageUrl} alt={`${name}'s profile picture`} />
+        <img src={imageUrl} alt={`${name}'s profile picture`} style="border: 1px solid var(--darkercolor);" />
     </div>
     <div class="member-info">
         <p><a href={href}>{name}</a> - <span class="role">{role}</span></p>
@@ -20,6 +20,7 @@ const { href, name, imageUrl, role } = Astro.props;
         </div>
     </div>
 </div>
+<hr>
 
 <style>
     .committee-member {
@@ -46,13 +47,13 @@ const { href, name, imageUrl, role } = Astro.props;
         font-style: italic;
         margin-bottom: 1rem;
     }
-    @media (max-width: 1250px) {
+    @media (max-width: 700px) {
         .committee-member {
             flex-direction: column;
         }
         .profile-image {
             width: 100%;
-            max-width: 300px;
+            max-width: 200px;
             margin: 0 auto 1rem auto;
         }
     }

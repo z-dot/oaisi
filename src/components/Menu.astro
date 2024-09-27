@@ -2,12 +2,18 @@
 
 import Clock from '../components/Clock.astro'
 
+interface Props { 
+    title?: string;
+}
+
+const { title } = Astro.props;
 ---
 <div id="sidebar">
     <div style="display: flex; gap: 1em;">
         <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
-            <img id="logo" src='src/logos/biglogo.svg' height="100px">
-            <div style="margin-left: auto;">
+            <a href="/"><img id="logo" src='src/logos/biglogo.svg' height="100px"></a>
+            <div id="menu-right" style="height: 100%; margin-left: auto; display: flex; flex-direction: column; justify-content: space-between;">
+                <span id="title" style="text-align: right;">{title && <h1>{title}</h1>}</span>
                 <Clock />
             </div>
         </div>
@@ -15,14 +21,15 @@ import Clock from '../components/Clock.astro'
     <div id="menu-content">
         <p>OAISI is the Oxford AI Safety Initiative. We are a community of students and researchers committed to reducing societal risks from advanced artificial intelligence.</p>
         <p>AI safety is a sociotechnical issue: we support both governance and technical work, and we run programmes to build skills in both.</p>
-        <p>Currently, we are open to applications for OxARENA, our intensive residential for rapidly building skills in technical safety. Apply here.</p>
+        <p>We'll open applications for programmes shortly, including our introductory fellowship.</p>
         <p>If you are a researcher working on AI safety visiting Oxford, please reach out to us here.</p>
         <!-- <hr> -->
-        <a href="/">Committee</a><br>
+        <a href="/committee">Committee</a><br>
         <a href="/">Contact us</a><br>
         <a href="/">Instagram</a>
     </div>
 
+    <hr id="menu-underline">
     <script>
     </script>
 </div>
@@ -40,12 +47,34 @@ import Clock from '../components/Clock.astro'
     }
     function toggleMenuContent() {
         const menuContent = document.getElementById('menu-content');
+        const underline = document.getElementById('menu-underline');
+        const menuRight = document.getElementById('menu-right');
+
         const isIndexPage = window.location.pathname === '/' || window.location.pathname === '/index.html';
+
+        if (isIndexPage) {
+            document.getElementById('title').style.display = 'none';
+        }
+
+        if (window.innerWidth < 1250 && underline) {
+            underline.style.display = 'block';
+        } else if (underline) {
+            underline.style.display = 'none';
+        }
         
-        if (window.innerWidth < 1250 && !isIndexPage && menuContent) {
+        if (window.innerWidth < 1250 && !isIndexPage && menuContent && underline && menuRight) {
             menuContent.style.display = 'none';
-        } else if (menuContent) {
+            menuRight.style.flexDirection = 'row';
+            menuRight.style.justifyContent = 'center';
+            menuRight.style.alignItems = 'center';
+            menuRight.style.columnGap = '20px';
+
+        } else if (menuContent && underline && menuRight) {
             menuContent.style.display = 'block';
+            menuRight.style.flexDirection = 'column';
+            menuRight.style.justifyContent = 'space-between';
+            menuRight.style.alignItems = 'none';
+            menuRight.style.gap = 'unset';
         }
     }
 
@@ -57,3 +86,8 @@ import Clock from '../components/Clock.astro'
     updateLogo();
     window.addEventListener('resize', updateLogo);
 </script>
+<style>
+    .underlinedmenu {
+
+    }
+</style>

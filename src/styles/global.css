@@ -37,7 +37,7 @@ body {
 }
 
 #sidebar {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     color: var(--darkercolor);
     line-height: 1.2;
     letter-spacing: 0.027em;
@@ -50,6 +50,18 @@ body {
     line-height: 1.2;
     letter-spacing: 0.027em;
     font-weight: 367;
+}
+
+h1 {
+    font-size: 1.2rem;
+    color: white;
+    text-align: center;
+    font-weight: 320;
+    font-variation-settings: 'wdth' 106;
+    background-color: var(--logocolor);
+    display: inline-block;
+    padding: 0.2em 0.4em;
+    margin: 0;
 }
 
 @media (min-width: 1250px) { 
@@ -69,7 +81,7 @@ body {
         margin: 0;
         /* height: 60px; */
         position: absolute;
-        background-color: lime;
+        /* background-color: lime; */
         left: max(calc(var(--sidesize) + 2 * var(--padding)), calc(50% - var(--mainsize) / 2));
         top: 0;
         padding: var(--padding);
@@ -82,7 +94,7 @@ body {
         max-width: 600px;
         margin: 0 auto;
         /* height:60px; */
-        background-color: blue;
+        /* background-color: blue; */
         padding: var(--padding);
     }
     
@@ -91,7 +103,7 @@ body {
         max-width: 600px;
         margin: 0 auto;
         /* height:60px; */
-        background-color: lime;
+        /* background-color: lime; */
         padding: var(--padding);
     } 
 }

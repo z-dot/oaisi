@@ -10,7 +10,7 @@ const { href, title, number, times } = Astro.props;
 ---
 
 <div class="item">
-    <p>{number} <a href={href}>{title}</a></p>
+    <p style="margin-top: 0;">{number} <a href={href}>{title}</a></p>
     <div class="item-content">
         <div class="slot-container">
             <slot />
