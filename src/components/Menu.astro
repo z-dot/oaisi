@@ -1,6 +1,8 @@
 ---
 
 import Clock from '../components/Clock.astro'
+import BigLogo from '../logos/biglogo.svg'
+import SmallLogo from '../logos/smalllogo.svg'
 
 interface Props { 
     title?: string;
@@ -11,7 +13,7 @@ const { title } = Astro.props;
 <div id="sidebar">
     <div style="display: flex; gap: 1em;">
         <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
-            <a href="/"><img id="logo" src='src/logos/biglogo.svg' height="100px"></a>
+            <a href="/"><img data-big-logo={BigLogo.src} data-small-logo={SmallLogo.src} id="logo" src={BigLogo.src} height="100px"></a>
             <div id="menu-right" style="height: 100%; margin-left: auto; display: flex; flex-direction: column; justify-content: space-between;">
                 <span id="title" style="text-align: right;">{title && <h1>{title}</h1>}</span>
                 <Clock />
@@ -37,11 +39,13 @@ const { title } = Astro.props;
 <script>
     function updateLogo() {
         const logo = document.getElementById('logo');
-        if (window.innerWidth < 1250) {
-            logo?.setAttribute('src', 'src/logos/smalllogo.svg')
+        const bigLogoSrc = logo?.dataset.bigLogo;
+        const smallLogoSrc = logo?.dataset.smallLogo;
+        if (window.innerWidth < 1250 && smallLogoSrc) {
+            logo?.setAttribute('src', smallLogoSrc)
             logo?.setAttribute('height', '50px');
-        } else {
-            logo?.setAttribute('src', 'src/logos/biglogo.svg')
+        } else if (bigLogoSrc) {
+            logo?.setAttribute('src', bigLogoSrc)
             logo?.setAttribute('height', '100px');
         }
     }
