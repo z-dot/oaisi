@@ -14,8 +14,11 @@
       second: '2-digit',
       timeZone: 'Europe/London'
     };
-    const timeString = now.toLocaleTimeString('en-US', options);
-    document.getElementById('clock').textContent = timeString;
+    const timeString = now.toLocaleTimeString('en-US');
+    const clock = document.getElementById('clock')
+    if (clock) {
+      clock.textContent = timeString;
+    }
   }
 
   // Update the clock immediately and then every second

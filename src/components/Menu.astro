@@ -49,11 +49,12 @@ const { title } = Astro.props;
         const menuContent = document.getElementById('menu-content');
         const underline = document.getElementById('menu-underline');
         const menuRight = document.getElementById('menu-right');
+        const title = document.getElementById('title')
 
         const isIndexPage = window.location.pathname === '/' || window.location.pathname === '/index.html';
 
-        if (isIndexPage) {
-            document.getElementById('title').style.display = 'none';
+        if (isIndexPage && title) {
+            title.style.display = 'none';
         }
 
         if (window.innerWidth < 1250 && underline) {
