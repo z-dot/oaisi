@@ -3,6 +3,7 @@
 import Clock from '../components/Clock.astro'
 import BigLogo from '../logos/biglogo.svg'
 import SmallLogo from '../logos/smalllogo.svg'
+import { Image } from 'astro:assets'
 
 interface Props { 
     title?: string;
@@ -13,7 +14,10 @@ const { title } = Astro.props;
 <div id="sidebar">
     <div style="display: flex; gap: 1em;">
         <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
-            <a href="/"><img data-big-logo={BigLogo.src} data-small-logo={SmallLogo.src} id="logo" src={BigLogo.src} height="100px"></a>
+            <a href="/">
+                <Image src={BigLogo} alt="Big Logo" id="big-logo" height={100} />
+                <Image src={SmallLogo} alt="Small Logo" id="small-logo" height={50} style="display: none;" />
+            </a>
             <div id="menu-right" style="height: 100%; margin-left: auto; display: flex; flex-direction: column; justify-content: space-between;">
                 <span id="title" style="text-align: right;">{title && <h1>{title}</h1>}</span>
                 <Clock />
@@ -38,15 +42,14 @@ const { title } = Astro.props;
 </div>
 <script>
     function updateLogo() {
-        const logo = document.getElementById('logo');
-        const bigLogoSrc = logo?.dataset.bigLogo;
-        const smallLogoSrc = logo?.dataset.smallLogo;
-        if (window.innerWidth < 1250 && smallLogoSrc) {
-            logo?.setAttribute('src', smallLogoSrc)
-            logo?.setAttribute('height', '50px');
-        } else if (bigLogoSrc) {
-            logo?.setAttribute('src', bigLogoSrc)
-            logo?.setAttribute('height', '100px');
+        const bigLogo = document.getElementById('big-logo');
+        const smallLogo = document.getElementById('small-logo');
+        if (window.innerWidth < 1250 && bigLogo && smallLogo) {
+            bigLogo.style.display = 'none';
+            smallLogo.style.display = 'inline';
+        } else if (bigLogo && smallLogo) {
+            bigLogo.style.display = 'inline';
+            smallLogo.style.display = 'none';
         }
     }
     function toggleMenuContent() {
