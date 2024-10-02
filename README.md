@@ -1,5 +1,5 @@
 <p align='center'>
-    <img src='./src/logos/biglogo.svg' alt='OAISI logo' style='width: 200px'>
+    <img src='./src/logos/bigtransparent.svg' alt='OAISI logo' style='width: 200px'>
 </p>
 
 This is the repository for the [Oxford AI Safety Initiative (OAISI) website](https://oaisi.org).
