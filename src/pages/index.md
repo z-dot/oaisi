@@ -12,3 +12,5 @@ OAISI's role is to:
 2. Introduce new talent - primarily Oxford students - to the field, and provide structure and support in building their skills.
 
 If you're in Oxford, and would like to join our community, we'll open up a form for applications of interest shortly.
+
+We're planning on running [two introductory talks](introtalks) this Michaelmas - we hope you'll join us!
