@@ -11,6 +11,4 @@ OAISI's role is to:
 1. Support the existing community, increasing the productivity, experience, and quality and quantity of conversations and projects concerning AI safety.
 2. Introduce new talent - primarily Oxford students - to the field, and provide structure and support in building their skills.
 
-We're running [two introductory talks](introtalks) this Michaelmas - we hope you'll join us!
-
-We have also just opened up applications for our [Strategy Fellowship](strategy) in Michaelmas this year.
+We're running [two introductory talks](introtalks) this term - we hope you'll join us! - and we've just opened up applications for our [Strategy Fellowship](strategy) in Michaelmas this year.
