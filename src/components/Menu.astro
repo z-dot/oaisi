@@ -15,8 +15,8 @@ const { title } = Astro.props;
     <div style="display: flex; gap: 1em;">
         <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
             <a href="/">
-                <Image src={BigLogo} alt="Big Logo" id="big-logo" height={100} />
-                <Image src={SmallLogo} alt="Small Logo" id="small-logo" height={50} style="display: none;" />
+                <Image src={BigLogo} alt="Big Logo" id="big-logo" height={100}  loading="eager"/>
+                <Image src={SmallLogo} alt="Small Logo" id="small-logo" height={50} style="display: none;" loading="eager" />
             </a>
             <div id="menu-right" style="height: 100%; margin-left: auto; display: flex; flex-direction: column; justify-content: space-between;">
                 <span id="title" style="text-align: right;">{title && <h1>{title}</h1>}</span>
