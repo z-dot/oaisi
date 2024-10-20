@@ -1,7 +1,8 @@
 ---
 layout: ../layouts/Layout.astro
+title: 'About'
 ---
-In Summer 2024, the former OxAI Safety and Governance team decided to spin out into an independent organisation: OAISI, the Oxford AI Safety Initiative.
+In Summer 2024, the former OxAI Safety and Governance team decided to spin out into an independent organisation: OAISI, the Oxford AI Safety Initiative. (We pronounce it *oh-eh-see*.)
 
 We hold that:
 1. The AI safety community - particularly at the undergraduate level - at Oxford would benefit from an organisation specifically trying to support research and education in AI safety here.
