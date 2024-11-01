@@ -12,4 +12,4 @@ OAISI's role is to:
 1. Support the existing community, increasing the productivity, experience, and quality and quantity of conversations and projects concerning AI safety.
 2. Introduce new talent - primarily Oxford students - to the field, and provide structure and support in building their skills.
 
-If you're in Oxford, and would like to join our community, reach out to us [here](mailto:info@oaisi.org)
+If you're in Oxford, and would like to join our community, reach out to us [here](mailto:gracie@oaisi.org)
