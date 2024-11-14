@@ -14,8 +14,10 @@ reach out, email us [here](mailto:gracie+newmember@oaisi.org).
 
 Upcoming:
 
-- [**AI Safety Working Groups**](workinggroup) _every Thursday 7-10pm_ - co-work
+- [**Weekly Co-working Sessions**](coworking) _every Tuesday and Thursday morning_ - co-work
   and discover new projects!
+- **Book 1-1 sessions** - go to our [get in touch](getintouch) page to book 1-1 sessions with our committee to chat about AI safety, OAISI, and how you can get involved
+- **Careers Advice Workshops** - get personalised career advice
 
 Previous:
 
