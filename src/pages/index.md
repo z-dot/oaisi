@@ -12,6 +12,8 @@ If you're an AI safety researcher visiting Oxford, reach out to us
 [here](mailto:gracie+visiting@oaisi.org). If you're based in Oxford and want to
 reach out, email us [here](mailto:gracie+newmember@oaisi.org).
 
+To get regular updates on what we're doing, sign up to our [mailing list](http://eepurl.com/i1scNU)
+
 Upcoming:
 
 - [**Weekly Co-working Sessions**](coworking) _every Tuesday and Thursday morning_ - co-work
