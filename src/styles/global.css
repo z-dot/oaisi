@@ -119,3 +119,12 @@ h1 {
     padding: 15px;
     padding-bottom: 0;
 }
+
+ul {
+    list-style: none; /* Remove default bullets */
+    padding-left: 1em; /* Ensure no additional padding */
+}
+
+ul li::marker {
+    content: "- "; /* Replace the marker with a dash and a single space */
+}
