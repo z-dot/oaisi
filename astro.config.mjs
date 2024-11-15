@@ -8,5 +8,6 @@ export default defineConfig({
   integrations: [mdx()],
   redirects: {
     "/workinggroup": "/projects",
+    "/list": "http://eepurl.com/i1scNU",
   },
 });
