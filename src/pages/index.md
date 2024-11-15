@@ -2,6 +2,8 @@
 layout: ../layouts/Layout.astro
 ---
 
+## Currently running:
+
 **Catastrophic risk from advanced artificial intelligence may be the defining
 issue of our time.**
 
