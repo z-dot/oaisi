@@ -1,32 +1,55 @@
 ---
+import Clock from "../components/Clock.astro";
+import BigLogo from "../logos/biglogo.svg";
+import SmallLogo from "../logos/smalllogo.svg";
+import { Image } from "astro:assets";
 
-import Clock from '../components/Clock.astro'
-import BigLogo from '../logos/biglogo.svg'
-import SmallLogo from '../logos/smalllogo.svg'
-import { Image } from 'astro:assets'
-
-interface Props { 
+interface Props {
     title?: string;
 }
 
 const { title } = Astro.props;
 ---
+
 <div id="sidebar">
     <div style="display: flex; gap: 1em;">
-        <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+        <div
+            style="display: flex; justify-content: space-between; align-items: center; width: 100%;"
+        >
             <a href="/">
-                <Image src={BigLogo} alt="Big Logo" id="big-logo" height={100}  loading="eager"/>
-                <Image src={SmallLogo} alt="Small Logo" id="small-logo" height={50} style="display: none;" loading="eager" />
+                <Image
+                    src={BigLogo}
+                    alt="Big Logo"
+                    id="big-logo"
+                    height={100}
+                    loading="eager"
+                />
+                <Image
+                    src={SmallLogo}
+                    alt="Small Logo"
+                    id="small-logo"
+                    height={50}
+                    style="display: none;"
+                    loading="eager"
+                />
             </a>
-            <div id="menu-right" style="height: 100%; margin-left: auto; display: flex; flex-direction: column; justify-content: space-between;">
-                <span id="title" style="text-align: right;">{title && <h1>{title}</h1>}</span>
+            <div
+                id="menu-right"
+                style="height: 100%; margin-left: auto; display: flex; flex-direction: column; justify-content: space-between;"
+            >
+                <span id="title" style="text-align: right;"
+                    >{title && <h1>{title}</h1>}</span
+                >
                 <Clock />
             </div>
         </div>
     </div>
     <div id="menu-content">
-        <p><b>OAISI</b> is the <b>Oxford AI Safety Initiative</b>. We are a community of students and researchers committed to <b>reducing societal risks from advanced artificial intelligence.</b></p>
-        <p>AI safety is a sociotechnical issue: we support both governance and technical work, and we run programmes to build skills in both.</p>
+        <p>
+            <b>OAISI</b> is the <b>Oxford AI Safety Initiative</b>. We are a
+            community of students and researchers committed to <b
+                >reducing societal risks from advanced artificial intelligence.</b>
+        </p>
         <!-- <hr> -->
 
         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0em;">
@@ -35,59 +58,65 @@ const { title } = Astro.props;
             <a href="/committee">Committee</a>
             <a href="/strategy">Strategy Fellowship</a>
             <a href="/getintouch">Get in touch</a>
-            <a href="/introtalks">Talks</a> 
-            <a href="http://eepurl.com/i1scNU">Mailing list</a>           
+            <a href="/introtalks">Talks</a>
+            <a href="http://eepurl.com/i1scNU">Mailing list</a>
         </div>
     </div>
 
-    <hr id="menu-underline">
-    <script>
-    </script>
+    <hr id="menu-underline" />
+    <script></script>
 </div>
-</div>
+
 <script>
     function updateLogo() {
-        const bigLogo = document.getElementById('big-logo');
-        const smallLogo = document.getElementById('small-logo');
+        const bigLogo = document.getElementById("big-logo");
+        const smallLogo = document.getElementById("small-logo");
         if (window.innerWidth < 1250 && bigLogo && smallLogo) {
-            bigLogo.style.display = 'none';
-            smallLogo.style.display = 'inline';
+            bigLogo.style.display = "none";
+            smallLogo.style.display = "inline";
         } else if (bigLogo && smallLogo) {
-            bigLogo.style.display = 'inline';
-            smallLogo.style.display = 'none';
+            bigLogo.style.display = "inline";
+            smallLogo.style.display = "none";
         }
     }
     function toggleMenuContent() {
-        const menuContent = document.getElementById('menu-content');
-        const underline = document.getElementById('menu-underline');
-        const menuRight = document.getElementById('menu-right');
-        const title = document.getElementById('title')
+        const menuContent = document.getElementById("menu-content");
+        const underline = document.getElementById("menu-underline");
+        const menuRight = document.getElementById("menu-right");
+        const title = document.getElementById("title");
 
-        const isIndexPage = window.location.pathname === '/' || window.location.pathname === '/index.html';
+        const isIndexPage =
+            window.location.pathname === "/" ||
+            window.location.pathname === "/index.html";
 
         if (isIndexPage && title) {
-            title.style.display = 'none';
+            title.style.display = "none";
         }
 
         if (window.innerWidth < 1250 && underline) {
-            underline.style.display = 'block';
+            underline.style.display = "block";
         } else if (underline) {
-            underline.style.display = 'none';
+            underline.style.display = "none";
         }
-        
-        if (window.innerWidth < 1250 && !isIndexPage && menuContent && underline && menuRight) {
-            menuContent.style.display = 'none';
-            menuRight.style.flexDirection = 'row';
-            menuRight.style.justifyContent = 'center';
-            menuRight.style.alignItems = 'center';
-            menuRight.style.columnGap = '20px';
 
+        if (
+            window.innerWidth < 1250 &&
+            !isIndexPage &&
+            menuContent &&
+            underline &&
+            menuRight
+        ) {
+            menuContent.style.display = "none";
+            menuRight.style.flexDirection = "row";
+            menuRight.style.justifyContent = "center";
+            menuRight.style.alignItems = "center";
+            menuRight.style.columnGap = "20px";
         } else if (menuContent && underline && menuRight) {
-            menuContent.style.display = 'block';
-            menuRight.style.flexDirection = 'column';
-            menuRight.style.justifyContent = 'space-between';
-            menuRight.style.alignItems = 'none';
-            menuRight.style.gap = 'unset';
+            menuContent.style.display = "block";
+            menuRight.style.flexDirection = "column";
+            menuRight.style.justifyContent = "space-between";
+            menuRight.style.alignItems = "none";
+            menuRight.style.gap = "unset";
         }
     }
 
@@ -95,12 +124,11 @@ const { title } = Astro.props;
     toggleMenuContent();
 
     // Add event listener for window resize
-    window.addEventListener('resize', toggleMenuContent);
+    window.addEventListener("resize", toggleMenuContent);
     updateLogo();
-    window.addEventListener('resize', updateLogo);
+    window.addEventListener("resize", updateLogo);
 </script>
 <style>
     .underlinedmenu {
-
     }
 </style>
