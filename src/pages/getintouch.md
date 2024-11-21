@@ -15,3 +15,7 @@ If you want to keep up with what we're doing you can also find us on:
 [LinkedIn](https://www.linkedin.com/company/oaisi/)
 
 or join our [Mailing List](https://oaisi.us17.list-manage.com/subscribe?u=0eaab65e70ffb4877d01c81e0&id=18d2d1286e)
+
+<hr />
+
+If you have any questions or recommendations for us, please [let us know here](https://airtable.com/appYLUyQifgR31gwq/pag8tZukPMUa26b1N/form)!
