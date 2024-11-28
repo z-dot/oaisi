@@ -1,6 +1,6 @@
 ---
-import type { ImageMetadata } from 'astro';
-import { Image } from 'astro:assets';
+import type { ImageMetadata } from "astro";
+import { Image } from "astro:assets";
 
 interface Props {
     name: string;
@@ -10,14 +10,22 @@ interface Props {
 }
 
 const { href, name, imageUrl, role } = Astro.props;
-const images = import.meta.glob<{ default: ImageMetadata }>('/src/images/*.{jpeg,jpg,png,gif}');
-if (!images[imageUrl]) throw new Error(`"${imageUrl}" does not exist in glob: "src/assets/*.{jpeg,jpg,png,gif}"`);
-
+const images = import.meta.glob<{ default: ImageMetadata }>(
+    "/src/images/*.{jpeg,jpg,png,gif}",
+);
+if (!images[imageUrl])
+    throw new Error(
+        `"${imageUrl}" does not exist in glob: "src/images/*.{jpeg,jpg,png,gif}"`,
+    );
 ---
 
 <div class="committee-member">
     <div class="profile-image">
-        <Image src={images[imageUrl]()} alt={`${name}'s profile picture`} style="border: 1px solid var(--darkercolor);" />
+        <Image
+            src={images[imageUrl]()}
+            alt={`${name}'s profile picture`}
+            style="border: 1px solid var(--darkercolor);"
+        />
     </div>
     <div class="member-info">
         <p><a href={href}>{name}</a> - <span class="role">{role}</span></p>
@@ -26,7 +34,7 @@ if (!images[imageUrl]) throw new Error(`"${imageUrl}" does not exist in glob: "s
         </div>
     </div>
 </div>
-<hr>
+<hr />
 
 <style>
     .committee-member {
