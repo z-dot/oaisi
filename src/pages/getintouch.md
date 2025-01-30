@@ -19,3 +19,6 @@ or join our [Mailing List](https://oaisi.us17.list-manage.com/subscribe?u=0eaab6
 <hr />
 
 If you have any questions or recommendations for us, please [let us know here](https://airtable.com/appYLUyQifgR31gwq/pag8tZukPMUa26b1N/form)!
+
+
+If you'd like to apply for or attend something that is closed, let us know at this link! It may be that we still have space and you can join late, it may be that we'll be running it again very soon! [Fill this in](https://airtable.com/appYLUyQifgR31gwq/pagJPbstuT1RAzuNb/form) and we'll let you know.
