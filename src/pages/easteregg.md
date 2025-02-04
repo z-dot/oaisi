@@ -4,3 +4,5 @@ title: 'Easter egg'
 ---
 
 Hello!
+
+I hope you're having an absolutely lovely day <3
