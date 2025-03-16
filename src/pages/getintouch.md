@@ -7,7 +7,7 @@ title: 'Get in touch'
 
 If you have a specific question about AI safety or OAISI, you can send an email to one of our committee members at [name]@oaisi.org. You're also very welcome to come to one of our working groups, co-working sessions, or socials to ask in-person.
 
-If you're generally interested but would prefer to have a 1-1 meeting or to have a chat, you can book in via [this link](https://calendly.com/gracie-oaisi/30min). We're happy to meet for a coffee, go for a walk, or have a quick call to discuss OAISI, how you can get involved, and any questions you might have about AI safety!
+If you're generally interested but would prefer to have a 1-1 meeting or to have a chat, you can book in via [this link](https://savvycal.com/selvaradov/chat). We're happy to meet for a coffee, go for a walk, or have a quick call to discuss OAISI, how you can get involved, and any questions you might have about AI safety!
 
 If you want to keep up with what we're doing you can also find us on:
 [Facebook](https://www.facebook.com/oaisioxford)
