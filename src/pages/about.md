@@ -26,4 +26,4 @@ AI safety is a sociotechnical issue: we support both governance and technical
 work, and we run programmes to build skills in both.
 
 If you're in Oxford, and would like to join our community, reach out to us
-[here](mailto:gracie@oaisi.org)
+[here](mailto:rohan@oaisi.org)
