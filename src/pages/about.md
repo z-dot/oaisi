@@ -3,6 +3,8 @@ layout: ../layouts/Layout.astro
 title: 'About'
 ---
 
+## About
+
 In Summer 2024, the former OxAI Safety and Governance team decided to spin out
 into an independent organisation: OAISI, the Oxford AI Safety Initiative. (We
 pronounce it _oh-ay-see_.)
@@ -26,4 +28,4 @@ AI safety is a sociotechnical issue: we support both governance and technical
 work, and we run programmes to build skills in both.
 
 If you're in Oxford, and would like to join our community, reach out to us
-[here](mailto:rohan@oaisi.org)
+[here](mailto:rohan@oaisi.org).
